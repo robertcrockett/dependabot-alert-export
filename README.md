@@ -1,11 +1,11 @@
 # dependabot-alert-export
-Export the Dependabot alerts as CSV file from a repo
+Export the Dependabot alerts as CSV file from a repo with filepath 
 
 This GitHub action helps to export the Dependabot alerts to a CSV file. One can define a workflow to run or triger based on specific event to capture all Dependabot alerts to a CSV file for further analysis. 
 
 
 ## Release
-GitHub Marketplace : https://github.com/marketplace/actions/dependabot-alert-export
+GitHub Marketplace : https://github.com/marketplace/actions/dependabot-alert-csv-export
 
 # How to Use the Action
 
@@ -21,8 +21,8 @@ Following is the sample code for integrating this action with your workflow
 
 ```
 steps:               
-      - name: Export Dependabot alerts
-        uses: ambilykk/dependabot-alert-export@v1.0
+      - name: Dependabot Alert CSV Export
+        uses: ShamKarthikS-Hexaware/dependabot-alert-export@v1.0
         with:        
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
           org_name: 'ORG_NAME'
