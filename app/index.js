@@ -95,6 +95,10 @@ const query =
     value: 'vulnerableManifestFilename'
   },
   {
+    label: 'Manifest File Path',
+    value: 'vulnerableManifestPath'
+  },
+  {
     label: 'Vulnerability Version Range',
     value: 'securityVulnerability.vulnerableVersionRange'
   },
