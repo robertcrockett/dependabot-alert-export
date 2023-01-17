@@ -91,14 +91,6 @@ const query =
     value: 'createdAt'
   },
   {
-    label: 'Manifest File Name',
-    value: 'vulnerableManifestFilename'
-  },
-  {
-    label: 'Manifest File Path',
-    value: 'vulnerableManifestPath'
-  },
-  {
     label: 'Vulnerability Version Range',
     value: 'securityVulnerability.vulnerableVersionRange'
   },
@@ -145,7 +137,15 @@ const query =
   {
     label: 'Fix Reason',
     value: 'fixReason'
-  }
+  },
+  {
+    label: 'Manifest File Path',
+    value: 'vulnerableManifestPath'
+  },
+  {
+    label: 'Manifest File Name',
+    value: 'vulnerableManifestFilename'
+  },
   ];
 
 // graphql query execution
