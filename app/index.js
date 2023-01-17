@@ -183,7 +183,7 @@ async function run(org_Name, repo_Name, csv_path) {
         const opts = { fields, "header": addTitleRow };
   
         // append to the existing file (or create and append if needed)
-        require("fs").appendFileSync(csv_path, `${parse(vulnerabilityNodes, opts)}\n`);
+        require("fs").appendFileSync(csv_path + new Date().toISOString(), `${parse(vulnerabilityNodes, opts)}\n`);
 
         // pagination to get next page data
         let pageInfo = alertResult.repository.vulnerabilityAlerts.pageInfo;
