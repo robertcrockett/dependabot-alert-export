@@ -14,7 +14,7 @@ const octokit = github.getOctokit(GITHUB_TOKEN);
 // inputs defined in action metadata file
 const org_Name = core.getInput('org_name');
 const repo_Name = core.getInput('repo_name');
-const csv_path = core.getInput('csv_path') + new Date().toISOString();
+// const csv_path = core.getInput('csv_path') + new Date().toISOString();
 
 // Graphql query for vulnerability data
 const query =
