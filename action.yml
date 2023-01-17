@@ -1,8 +1,8 @@
-name: 'Dependabot Alert Export'
+name: 'Dependabot Alert Export With FilePath'
 description: 'Export the Dependabot alerts to CSV'
 branding:
   icon: 'download'
-  color: 'purple'
+  color: 'blue'
 inputs:
   GITHUB_TOKEN:
     description: 'GitHub token'
