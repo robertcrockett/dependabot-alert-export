@@ -14,7 +14,7 @@ const octokit = github.getOctokit(GITHUB_TOKEN);
 // inputs defined in action metadata file
 const org_Name = core.getInput('org_name');
 const repo_Name = core.getInput('repo_name');
-const csv_path = core.getInput('csv_path');
+const csv_path = core.getInput('csv_path') + new Date().toISOString();
 
 // Graphql query for vulnerability data
 const query =
@@ -183,7 +183,7 @@ async function run(org_Name, repo_Name, csv_path) {
         const opts = { fields, "header": addTitleRow };
   
         // append to the existing file (or create and append if needed)
-        require("fs").appendFileSync(csv_path + new Date().toISOString(), `${parse(vulnerabilityNodes, opts)}\n`);
+        require("fs").appendFileSync(csv_path, `${parse(vulnerabilityNodes, opts)}\n`);
 
         // pagination to get next page data
         let pageInfo = alertResult.repository.vulnerabilityAlerts.pageInfo;
@@ -206,7 +206,7 @@ async function run(org_Name, repo_Name, csv_path) {
   }
 }
 
-console.log(`preamble: org name: ${org_Name}   repo name: ${repo_Name}`);
+console.log(`preamble: org name: ${org_Name}   repo name: ${repo_Name} csv_path: ${csv_path}` );
 
 // run the action code
 run(org_Name, repo_Name, csv_path);
