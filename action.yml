@@ -1,5 +1,5 @@
-name: 'Dependabot Alert Export With FilePath'
-description: 'Export the Dependabot alerts to CSV'
+name: 'Dependabot Alert CSV Export'
+description: 'Export the Dependabot alerts to CSV with FilePath'
 branding:
   icon: 'download'
   color: 'blue'
