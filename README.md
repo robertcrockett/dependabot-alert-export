@@ -3,11 +3,6 @@ Export the Dependabot alerts as CSV file from a repo with filepath
 
 This GitHub action helps to export the Dependabot alerts to a CSV file. One can define a workflow to run or triger based on specific event to capture all Dependabot alerts to a CSV file for further analysis. 
 
-https://registry.npmjs.org/
-
-## Release
-GitHub Marketplace : https://github.com/marketplace/actions/dependabot-alert-csv-export
-
 # Local Testing
 For local testing of the action, there are 4 environment variables required. Each of these can be exported with a prefix of INPUT.
 ```
@@ -32,7 +27,7 @@ Following is the sample code for integrating this action with your workflow
 ```
 steps:               
       - name: Dependabot Alert CSV Export
-        uses: ShamKarthikS-Hexaware/dependabot-alert-export@v1.0
+        uses: robertcrockett/dependabot-alert-export@v2
         with:        
           GITHUB_TOKEN: ${{secrets.GH_TOKEN}}
           org_name: 'ORG_NAME'
@@ -40,7 +35,7 @@ steps:
           csv_path: data/vulnerability.csv
           
       - name: Upload Vulnerability report
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
            name: vulnerability_report
            path: data/vulnerability.csv          
@@ -73,7 +68,6 @@ Following fields are included in the Vulnerability Report
 - Dismiss Reason
 - Dismiss Comment
 - Fixed At (for Fixed alerts)
-- Fix Reason
 
 ## Report
 Vulnerability report in CSV format will be available as part of the build artifacts for download
