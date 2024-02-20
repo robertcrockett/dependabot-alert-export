@@ -20,5 +20,5 @@ outputs:
   alerts_count:
     description: Number of vulnerability alerts    
 runs:
-  using: 'node16'
-  main: 'app/index.js'
+  using: 'node20'
+  main: 'dist/index.js'

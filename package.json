@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ambilykk/dependabot-alert-export.git"
+    "url": "git+https://github.com/robertcrockett/dependabot-alert-export"
   },
   "author": "ambilykk",
   "license": "ISC",
@@ -17,10 +17,10 @@
   },
   "homepage": "https://github.com/ambilykk/dependabot-alert-export#readme",
   "dependencies": {
-    "@actions/core": "^1.10.0",
-    "@actions/github": "^5.0.3",
-    "csv-string": "^4.1.0",
-    "make-dir": "^3.1.0",
+    "@actions/core": "^1.10.1",
+    "@actions/github": "^6.0.0",
+    "csv-string": "^4.1.1",
+    "make-dir": "^4.0.0",
     "json2csv": "^5.0.7"
   }
 }

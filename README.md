@@ -3,9 +3,19 @@ Export the Dependabot alerts as CSV file from a repo with filepath
 
 This GitHub action helps to export the Dependabot alerts to a CSV file. One can define a workflow to run or triger based on specific event to capture all Dependabot alerts to a CSV file for further analysis. 
 
+https://registry.npmjs.org/
 
 ## Release
 GitHub Marketplace : https://github.com/marketplace/actions/dependabot-alert-csv-export
+
+# Local Testing
+For local testing of the action, there are 4 environment variables required. Each of these can be exported with a prefix of INPUT.
+```
+export INPUT_GITHUB_TOKEN='{Your PAT Token}'
+export INPUT_org_name='{org_name}'
+export INPUT_repo_name='{repo_name}'
+export INPUT_csv_path='{csv_path}'
+```
 
 # How to Use the Action
 
